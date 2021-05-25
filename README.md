@@ -1,7 +1,7 @@
 
 TagMe Demo
 ============
-Official TagMe API wrapper for Python.
+in this demo we will be usint Tagme-Python Official TagMe API wrapper for Python.
 
 Installation and setup
 ----------------------
