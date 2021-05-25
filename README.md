@@ -1,7 +1,6 @@
 
-============
 tagme-python
-
+============
 Official TagMe API wrapper for Python.
 
 Installation and setup
