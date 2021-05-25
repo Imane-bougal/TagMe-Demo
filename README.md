@@ -1,5 +1,5 @@
 
-tagme-python
+TagMe Demo
 ============
 Official TagMe API wrapper for Python.
 
