@@ -71,23 +71,26 @@ You can submit a list of pairs of any size, but the TagMe web service will be is
 If one entity does not exist, the result will be ``None``.
 
 .. code-block:: python
+	
+  # Get relatedness between a pair of entities specified by title.
+  rels = tagme.relatedness_title(("Barack Obama", "Italy"))
+  print "Obama and italy have a semantic relation of", rels.relatedness[0].rel
 
- # Get relatedness between a pair of entities specified by title.
- rels = tagme.relatedness_title(("Barack Obama", "Italy"))
- print "Obama and italy have a semantic relation of", rels.relatedness[0].rel
- 
- # Get relatedness between a pair of entities specified by Wikipedia ID.
- rels = tagme.relatedness_wid((31717, 534366))
- print "IDs 31717 and 534366 have a semantic relation of ", rels.relatedness[0].rel
- 
- # Get relatedness between three pairs of entities specified by title.
- # The last entity does not exist, hence the value for that pair will be None.
- rels = tagme.relatedness_title([("Barack_Obama", "Italy"),
-                                 ("Italy", "Germany"),
-                                 ("Italy", "BAD ENTITY NAME")])
- for rel in rels.relatedness:
-     print rel
+  # Get relatedness between a pair of entities specified by Wikipedia ID.
+  rels = tagme.relatedness_wid((31717, 534366))
+  print "IDs 31717 and 534366 have a semantic relation of ", rels.relatedness[0].rel
 
- # You can also build a dictionary
- rels_dict = dict(rels)
- print rels_dict[("Barack Obama", "Italy")]
+  # Get relatedness between three pairs of entities specified by title.
+  # The last entity does not exist, hence the value for that pair will be None.
+  rels = tagme.relatedness_title([("Barack_Obama", "Italy"),
+                                  ("Italy", "Germany"),
+                                  ("Italy", "BAD ENTITY NAME")])
+  for rel in rels.relatedness:
+      print rel
+
+  # You can also build a dictionary
+  rels_dict = dict(rels)
+  print rels_dict[("Barack Obama", "Italy")]
+ 
+ 
+ 
